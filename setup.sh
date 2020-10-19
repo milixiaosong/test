@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
  
 echo 'checking mysql status.'
 service mysql status
