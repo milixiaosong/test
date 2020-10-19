@@ -5,7 +5,7 @@ ENV MYSQL_ROOT_PASSWORD Xrq871323093.
 
 #COPY setup.sh /mysql/setup.sh
 COPY pboot.sql /mysql/pboot.sql
-RUN chmod 777 -Rf /mysql/setup.sh
+#RUN chmod 777 -Rf /mysql/setup.sh
 RUN service mysql start
 RUN mysql -uroot -pXrq871323093. create database pboot;
 RUN mysql -uroot -pXrq871323093. pboot < /mysql/pboot.sql
