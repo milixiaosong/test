@@ -8,7 +8,7 @@ service mysql start
 sleep 10s
 service mysql status
 
-echo "create database 'pboot'" | mysql -u username -p
+echo "create database pboot" | mysql -u root -p
 sleep 3s
  
 echo '2.start importing data....'
