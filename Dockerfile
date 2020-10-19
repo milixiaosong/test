@@ -6,6 +6,6 @@ ENV MYSQL_DATABASE pboot
 
 COPY pboot.sql /mysql/pboot.sql
 RUN service mysql start
-RUN mysql -uroot -pXrq871323093. pboot < /mysql/pboot.sql
+#RUN mysql -uroot -pXrq871323093. pboot < /mysql/pboot.sql
 
 EXPOSE 3306
