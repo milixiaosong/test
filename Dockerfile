@@ -1,13 +1,12 @@
 FROM mysql:5.7
 
-#ENV MYSQL_ALLOW_EMPTY_PASSWORD yes
-ENV MYSQL_ROOT_PASSWORD Xrq871323093.
-ENV MYSQL_DATABASE pboot
+MAINTAINER xiaosong(xiaosong.mili@gmail.com)
 
-COPY setup.sh /mysql/setup.sh
-COPY pboot.sql /mysql/pboot.sql
-RUN service mysql start
-#RUN mysql -uroot -pXrq871323093. pboot < /mysql/pboot.sql
+ENV MYSQL_ROOT_PASSWORD Abcd1234
+ENV MYSQL_DATABASE pbootcms
 
-CMD ["sh", "/mysql/setup.sh"]
+VOLUME ["/var/lib/mysql", "/var/log/mysql"]
+
+COPY pboot.sql /docker-entrypoint-initdb.d/
+
 EXPOSE 3306
